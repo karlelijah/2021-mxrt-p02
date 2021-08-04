@@ -8,7 +8,8 @@ public class buttonScript : MonoBehaviour
     public GameObject PlusButton;
     public GameObject MinusButton;
     public GameObject ResetButton;
-    public GameObject target;
+    public GameObject DNA;
+    public GameObject Plane;
 
     Vector3 mInitialSize;
     Vector3 scaleChange;
@@ -18,6 +19,7 @@ public class buttonScript : MonoBehaviour
     {
         mInitialSize = new Vector3(1.8f, 1.8f, 1.8f);
         scaleChange = new Vector3(0.1f, 0.1f, 0.1f);
+
         PlusButton = GameObject.Find("PlusButton");
         MinusButton = GameObject.Find("MinusButton");
         ResetButton = GameObject.Find("ResetButton");
@@ -28,10 +30,10 @@ public class buttonScript : MonoBehaviour
         ResetButton.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(ResetSizePressed);
         ResetButton.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(ResetSizeReleased);
     }
-
     public void IncreaseSizePressed(VirtualButtonBehaviour vb)
     {
-        target.transform.localScale += scaleChange;
+        DNA.transform.localScale += scaleChange;
+        Plane.transform.localScale += scaleChange;
         Debug.Log("IncreaseSizeButton Pressed.");
     }
     public void IncreaseSizeReleased(VirtualButtonBehaviour vb)
@@ -40,7 +42,8 @@ public class buttonScript : MonoBehaviour
     }
     public void DecreaseSizePressed(VirtualButtonBehaviour vb)
     {
-        target.transform.localScale -= scaleChange;
+        DNA.transform.localScale -= scaleChange;
+        Plane.transform.localScale -= scaleChange;
         Debug.Log("DecreaseSizeButton Pressed.");
     }
     public void DecreaseSizeReleased(VirtualButtonBehaviour vb)
@@ -49,7 +52,8 @@ public class buttonScript : MonoBehaviour
     }
     public void ResetSizePressed(VirtualButtonBehaviour vb)
     {
-        target.transform.localScale = mInitialSize;
+        DNA.transform.localScale = mInitialSize;
+        Plane.transform.localScale = mInitialSize;
         Debug.Log("ResetSizeButton Pressed.");
     }
     public void ResetSizeReleased(VirtualButtonBehaviour vb)
