@@ -32,28 +32,28 @@ public class buttonScript : MonoBehaviour
     public void IncreaseSizePressed(VirtualButtonBehaviour vb)
     {
         target.transform.localScale += scaleChange;
-        Debug.Log("Button Pressed.");
+        Debug.Log("IncreaseSizeButton Pressed.");
     }
     public void IncreaseSizeReleased(VirtualButtonBehaviour vb)
     {
-        Debug.Log("Button Released.");
+        Debug.Log("IncreaseSizeButton Released.");
     }
     public void DecreaseSizePressed(VirtualButtonBehaviour vb)
     {
         target.transform.localScale -= scaleChange;
-        Debug.Log("Button Pressed.");
+        Debug.Log("DecreaseSizeButton Pressed.");
     }
     public void DecreaseSizeReleased(VirtualButtonBehaviour vb)
     {
-        Debug.Log("Button Released.");
+        Debug.Log("DecreaseSizeButton Released.");
     }
     public void ResetSizePressed(VirtualButtonBehaviour vb)
     {
         target.transform.localScale = mInitialSize;
-        Debug.Log("Button Pressed.");
+        Debug.Log("ResetSizeButton Pressed.");
     }
     public void ResetSizeReleased(VirtualButtonBehaviour vb)
     {
-        Debug.Log("Button Released.");
+        Debug.Log("ResetSizeButton Released.");
     }
 }
